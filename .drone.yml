@@ -1,0 +1,17 @@
+pipeline:
+
+  docker:
+    image: plugins/docker
+    repo: chrisns/mqtt_logger
+    tags:
+      - latest
+      - ${DRONE_BUILD_NUMBER}
+    secrets: [ docker_username, docker_password ]
+
+  deploy:
+    image: docker
+    secrets: [ USER, PASS, MQTT ]
+    commands:
+      - docker deploy --compose-file docker-compose.yml mqtt_logger
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

@@ -1,0 +1,22 @@
+{
+  "name": "mqtt_logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisns/mqtt_logger.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisns/mqtt_logger/issues"
+  },
+  "homepage": "https://github.com/chrisns/mqtt_logger#readme",
+  "dependencies": {
+    "mqtt": "^2.13.0"
+  }
+}
